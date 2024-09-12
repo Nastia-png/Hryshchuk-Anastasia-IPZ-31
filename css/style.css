@@ -1,33 +1,114 @@
+:root {
+  --main-bg-color: #ffffff;
+  --text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --button-bg-color: #f5f4fa;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  color: 212121;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.text24-bold {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.text18-bold {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.project-category {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+}
+
+.logo-color {
+  color: var(--accent-color);
+}
+
+/* .logo-secondary-color {
+  color: #ffffff;
+} */
+
+.text14-medium {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.text14-bold {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.company-description-text {
+  font-size: 14px;
+  line-height: 2.4;
+}
+
+.company-info {
+  color: var(--secondary-text-color);
 }
 
 h1 {
   font-size: 44px;
   font-weight: 900;
+  letter-spacing: 0.06em;
   /* color: #ffffff; */
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.team-member-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team-member-job-title {
+  font-size: 16px;
+  color: var(--secondary-text-color);
 }
 
 button {
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   border: 0;
 }
 
+.btn-order-service {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--accent-color);
+  font-size: 16px;
+}
+
 a {
   text-decoration: none;
-  color: #212121;
+  color: var(--text-color);
 }
 
 a:hover,
 a:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 button:hover,
 button:focus {
-  background-color: #2196f3;
+  background-color: var(--accent-color);
+}
+
+.company-address {
+  font-size: 14px;
+  line-height: 1.6;
+  font-style: normal;
+  /* color: #ffffff; */
 }
