@@ -1,0 +1,33 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: 212121;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 900;
+  /* color: #ffffff; */
+}
+
+button {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+
+a:hover,
+a:focus {
+  color: #2196f3;
+}
+
+button:hover,
+button:focus {
+  background-color: #2196f3;
+}
