@@ -309,7 +309,6 @@ button:active {
   display: flex;
   gap: 30px;
   list-style: none;
-  padding: 0px 15px;
 }
 
 .project-list .project-elements {
