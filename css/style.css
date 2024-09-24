@@ -328,7 +328,7 @@ button:active {
 
 .footer {
   background-color: var(--background-fill-color);
-  height: 251px;
+  padding: 60px 60px;
   display: flex;
 }
 
