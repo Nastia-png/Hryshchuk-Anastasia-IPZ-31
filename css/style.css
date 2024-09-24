@@ -8,16 +8,11 @@
   --shadow-color: #eeeeee;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .container {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  box-sizing: border-box;
-  width: 1200px;
+  padding: 0 15px;
+  max-width: 1200px;
 }
 
 body {
@@ -36,19 +31,15 @@ body {
 
 .header .container {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 80px;
   flex-direction: row;
-  margin-bottom: 5px;
-  padding: 0 15px;
 }
 
 .header .container .nav-menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-right: 354px;
+  margin-right: auto;
 }
 
 .header .container .nav-menu ul {
