@@ -317,6 +317,14 @@ button:active {
   max-width: 370px;
 }
 
+.project-elements:hover,
+.project-elements:focus {
+  background-color: var(--white);
+  border: 1px solid #eeeeee;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
 .project-list .project-elements .project-info {
   padding: 20px 23px;
 }
