@@ -86,6 +86,12 @@ body {
   color: var(--secondary-text-color);
 }
 
+.header-icon {
+  margin-right: 10px;
+  align-self: center;
+  fill: currentColor;
+}
+
 /*MAIN*/
 
 .text18-bold {
@@ -200,7 +206,7 @@ ul {
   color: var(--secondary-text-color);
   letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 button {
@@ -327,6 +333,16 @@ button:active {
 
 .project-list .project-elements .project-info {
   padding: 20px 23px;
+}
+
+.company-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: var(--button-bg-color);
+  border-radius: 4px;
 }
 
 /*FOOTER*/
