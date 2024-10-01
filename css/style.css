@@ -13,7 +13,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-  width: 1200px;
+  max-width: 1200px;
 }
 
 body {
@@ -430,7 +430,6 @@ button:active {
 .footer {
   background-color: var(--background-fill-color);
   padding: 60px 60px;
-  display: flex;
 }
 
 .company-address {
@@ -440,14 +439,13 @@ button:active {
   font-style: normal;
   color: #ffffff;
   margin-bottom: 12px;
+  margin-top: 28px;
 }
 
 .footer .container {
-  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin-bottom: 5px;
   gap: 28px;
   padding: 0 15px;
 }
