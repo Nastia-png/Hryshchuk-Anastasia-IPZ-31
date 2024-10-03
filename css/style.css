@@ -174,11 +174,8 @@ ul {
   transition: border-color 0.3s ease;
 }
 
-.regular-clients .regular-client-list .client a {
-  padding: 16px 32px;
-}
-
 .regular-clients .regular-client-list .client-logo {
+  padding: 16px 32px;
   width: 100%;
   height: 100%;
   fill: var(--icon-color);
@@ -294,7 +291,6 @@ button {
 
 .btn-type-business {
   display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   line-height: calc(26 / 16);
   font-size: 16px;
@@ -303,13 +299,6 @@ button {
   border-radius: 4px;
   text-align: center;
   background-color: var(--button-bg-color);
-}
-
-.btn-type-business:hover,
-.btn-type-business:focus {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  background-color: var(--accent-color);
-  color: #ffffff;
 }
 
 .btn-order-service {
@@ -408,6 +397,12 @@ button:active {
   max-width: 370px;
 }
 
+.header-icon:hover,
+.header-icon:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
 .project-elements:hover,
 .project-elements:focus {
   background-color: var(--white);
@@ -437,10 +432,6 @@ button:active {
   padding: 60px 60px;
 }
 
-.footer address {
-  margin-top: 28px;
-}
-
 .company-address {
   font-size: 14px;
   line-height: 1.1;
@@ -448,12 +439,13 @@ button:active {
   font-style: normal;
   color: #ffffff;
   margin-bottom: 12px;
+  margin-top: 28px;
 }
 
 .footer .container {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: flex-start;
   flex-direction: row;
   gap: 28px;
   padding: 0 15px;
@@ -487,6 +479,7 @@ button:active {
   font-weight: 700;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
+  margin-top: 12px;
 }
 
 .footer-social-links {
