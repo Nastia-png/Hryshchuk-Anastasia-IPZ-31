@@ -7,6 +7,18 @@
   --background-fill-color: #2f303a;
   --shadow-color: #eeeeee;
   --icon-color: #afb1b8;
+  --accent-secondary-color: #188ce8;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Приховування стрілочок у Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .container {
@@ -555,10 +567,6 @@ button:active {
   padding: 0 15px;
 }
 
-/* .footer .container .footer-address {
-  margin-right: 70px;
-} */
-
 .footer .container .company-info-container {
   display: flex;
   flex-direction: column;
@@ -616,3 +624,164 @@ button:active {
 }
 
 /*MODAL*/
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  background-color: #fefefe;
+  padding: 8px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  width: 80%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  width: 528px;
+  height: 581px;
+  justify-content: center;
+}
+
+.btn-close-modal {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid var(--icon-color);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-title {
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  margin: 12px 40px 0 40px;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.input-container .input-title {
+  margin-bottom: 4px;
+  color: var(--secondary-text-color);
+}
+
+.input-container .input-field {
+  border: none;
+  outline: none;
+  padding: 0;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(calc(21 / 255), calc(21 / 255), calc(21 / 255), 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+}
+
+.textarea-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(calc(21 / 255), calc(21 / 255), calc(21 / 255), 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.textarea-wrapper .textarea-field {
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.input-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  margin: 0 12px;
+}
+
+.input-icon .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.modal .checkbox-wrapper {
+  display: flex;
+  margin: 0 13px;
+  margin-top: 20px;
+}
+
+.checkbox-wrapper .checkbox {
+  margin-right: 4px;
+  height: 16px;
+  width: 16px;
+}
+
+.checkbox-title .btn-open-contract {
+  color: var(--accent-color);
+}
+
+.modal-footer {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-footer .btn-modal-submit {
+  height: 50px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.modal-footer .btn-modal-submit:hover,
+.modal-footer .btn-modal-submit:focus {
+  background-color: var(--accent-secondary-color);
+}
+
+.btn-modal-submit-text {
+  /* shrift */
+}
