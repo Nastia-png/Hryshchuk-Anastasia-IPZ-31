@@ -6,6 +6,8 @@
     <title>Студія</title>
     <link rel="stylesheet" href="css/modern-normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,7 +57,7 @@
       <section class="section1">
         <div class="container">
           <h1 class="h1-index">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br />ВАШОГО БІЗНЕСУ</h1>
-          <button type="button" class="btn-order-service">
+          <button type="button" class="btn-order-service" data-modal-open>
             Замовити послугу
           </button>
         </div>
@@ -119,29 +121,38 @@
         <div class="container">
           <h2 class="h2-index">Чим ми займаємося</h2>
           <ul class="img-work-list">
-            <li>
+            <li class="list-img-work">
               <img
                 src="images/photo1.jpg"
                 alt="program code development"
                 width="370"
                 height="294"
               />
+              <div class="text-img-work">
+                <p>Декстопні додатки</p>
+              </div>
             </li>
-            <li>
+            <li class="list-img-work">
               <img
                 src="images/photo2.jpg"
                 alt="development of the phone interface"
                 width="370"
                 height="294"
               />
+              <div class="text-img-work">
+                <p>Мобільні додатки</p>
+              </div>
             </li>
-            <li>
+            <li class="list-img-work">
               <img
                 src="images/photo3.jpg"
                 alt="development of the color spectrum"
                 width="370"
                 height="294"
               />
+              <div class="text-img-work">
+                <p>Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -442,5 +453,16 @@
         </div>
       </div>
     </footer>
+
+    <!-- <div data-modal class="modal-backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close class="close-button">
+          <svg class="modal_icon-close">
+            <use href="images/icons.svg#icon-Vector-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div> -->
+    <script src="js/modal.js"></script>
   </body>
 </html>

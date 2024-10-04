@@ -50,6 +50,30 @@ body {
   gap: 50px;
 }
 
+.header .container .nav-menu li a {
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.header .container .nav-menu li a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  background-color: var(--accent-color);
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+.header .container .nav-menu li a:hover::after,
+.header .container .nav-menu li a:focus::after {
+  width: 100%;
+}
+
 .header .container .company-info-container {
   display: flex;
   gap: 40px;
@@ -171,7 +195,7 @@ ul {
   border-radius: 4px;
   border: 1px var(--icon-color) solid;
   display: inline-block;
-  transition: border-color 0.3s ease;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-clients .regular-client-list .client a {
@@ -182,7 +206,7 @@ ul {
   width: 100%;
   height: 100%;
   fill: var(--icon-color);
-  transition: fill 0.3s ease;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-clients .regular-client-list a:hover {
@@ -213,6 +237,37 @@ ul {
   flex-direction: row;
   gap: 30px;
   margin-top: 50px;
+}
+
+.img-work .container .img-work-list .list-img-work {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.img-work .container .img-work-list .list-img-work img {
+  display: block;
+}
+
+.img-work .container .img-work-list .text-img-work {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #2f303acc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  word-wrap: break-word;
+}
+
+.img-work .container .img-work-list li {
+  position: relative;
 }
 
 .section2 .container .team-member-list {
@@ -272,7 +327,6 @@ ul {
   fill: currentColor;
   width: 100%;
   height: 100%;
-  transition: color 0.3s ease;
 }
 
 .member-info .team-members-social-links .social-links-icons:hover {
@@ -282,7 +336,6 @@ ul {
 .team-members-social-links a:hover,
 .team-members-social-links a:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
   outline: none;
 }
 
@@ -290,6 +343,8 @@ button {
   cursor: pointer;
   border: none;
   font-family: "Roboto", sans-serif;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-type-business {
@@ -327,6 +382,8 @@ a {
   text-decoration: none;
   color: var(--text-color);
   letter-spacing: 0.02em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover,
@@ -404,8 +461,47 @@ button:active {
 
 .project-list .project-elements {
   border: 1px solid #eee;
-  background: var(--white);
+  background: #ffffff;
   max-width: 370px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-list .project-elements .overlay {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-list .project-elements .img-project {
+  width: 100%;
+}
+
+.project-elements-container {
+  position: relative;
+}
+
+.text-project-list {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px;
+}
+
+.text-project-info {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  color: #ffffff;
+  padding: 63px 24px;
+}
+
+.project-elements-container:hover .text-project-list {
+  opacity: 1;
 }
 
 .project-elements:hover,
@@ -518,3 +614,5 @@ button:active {
   color: #ffffff;
   fill: currentColor;
 }
+
+/*MODAL*/
