@@ -16,7 +16,6 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* Приховування стрілочок у Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
 }
@@ -656,6 +655,7 @@ button:active {
   width: 528px;
   height: 581px;
   justify-content: center;
+  border: 1px solid #ffffff;
 }
 
 .btn-close-modal {
@@ -667,6 +667,12 @@ button:active {
   align-items: center;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid var(--icon-color);
+}
+
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  color: var(--accent-color);
+  background-color: #ffffff;
 }
 
 .modal-header {
@@ -690,6 +696,9 @@ button:active {
 }
 
 .input-container .input-title {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   margin-bottom: 4px;
   color: var(--secondary-text-color);
 }
@@ -710,6 +719,17 @@ button:active {
   border-radius: 4px;
   width: 100%;
   height: 40px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.input-wrapper:hover,
+.input-wrapper:focus,
+.input-wrapper:active {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-wrapper {
@@ -720,6 +740,13 @@ button:active {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
+}
+
+.textarea-wrapper:hover,
+.textarea-wrapper:focus,
+.textarea-wrapper:active {
+  border-color: var(--accent-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-wrapper .textarea-field {
@@ -741,10 +768,10 @@ button:active {
   margin: 0 12px;
 }
 
-.input-icon .icon {
-  width: 12px;
-  height: 12px;
-}
+/* .input-icon .icon {
+  width: 18px;
+  height: 18px;
+} */
 
 .modal .checkbox-wrapper {
   display: flex;
@@ -756,10 +783,18 @@ button:active {
   margin-right: 4px;
   height: 16px;
   width: 16px;
+  border: 1px solid #007bff;
+}
+
+.checkbox-title {
+  color: #757575;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 .checkbox-title .btn-open-contract {
   color: var(--accent-color);
+  text-decoration: underline;
 }
 
 .modal-footer {
@@ -779,9 +814,18 @@ button:active {
 
 .modal-footer .btn-modal-submit:hover,
 .modal-footer .btn-modal-submit:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--accent-color);
+}
+
+.modal-footer .btn-modal-submit:hover,
+.modal-footer .btn-modal-submit:focus {
   background-color: var(--accent-secondary-color);
 }
 
 .btn-modal-submit-text {
-  /* shrift */
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 16px;
 }
