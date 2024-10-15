@@ -62,11 +62,9 @@
             </button>
           </div>
 
-          <div class="modal-title">
+          <form class="modal-body">
             <h2>Залиште свої дані, ми вам передзвонимо</h2>
-          </div>
 
-          <div class="modal-body">
             <ul class="personal-data-inputs-list">
               <li class="input-container">
                 <p class="input-title">Ім'я</p>
@@ -127,8 +125,8 @@
             </ul>
 
             <div class="checkbox-wrapper">
-              <label class="container"
-                >Погоджуюся з розсилкою та приймаю
+              <label class="container">
+                Погоджуюся з розсилкою та приймаю
                 <a href="#" class="btn-open-contract"> Умови договору</a>
                 <input type="checkbox" checked="checked" />
                 <span class="checkmark"></span>
@@ -136,13 +134,16 @@
             </div>
 
             <div class="modal-footer">
-              <button class="btn-modal-submit">
-                <p class="btn-modal-submit-text">Відправити</p>
-              </button>
+              <form>
+                <button class="btn-modal-submit">
+                  <p class="btn-modal-submit-text">Відправити</p>
+                </button>
+              </form>
             </div>
-          </div>
+          </form>
         </div>
       </div>
+
       <section class="section1">
         <div class="container">
           <h1 class="h1-index">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br />ВАШОГО БІЗНЕСУ</h1>
@@ -543,20 +544,23 @@
 
         <div class="footer-newsletter-signup">
           <p class="footer-newsletter-text">Підпишіться на розсилку</p>
-          <div class="input-button-wrapper">
-            <input
-              type="email"
-              id="email"
-              class="email-input"
-              placeholder="E-mail"
-            />
-            <button class="btn-submit-newsletter" type="submit">
-              Підписатися
-              <svg class="icon-send">
-                <use href="images/icons.svg#icon-icon-send"></use>
-              </svg>
-            </button>
-          </div>
+          <form action="#" method="post" class="newsletter-form">
+            <div class="input-button-wrapper">
+              <input
+                type="email"
+                id="email"
+                class="email-input"
+                placeholder="E-mail"
+                required
+              />
+              <button class="btn-submit-newsletter" type="submit">
+                Підписатися
+                <svg class="icon-send">
+                  <use href="images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
