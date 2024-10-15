@@ -583,6 +583,7 @@ button:active {
   flex-direction: row;
   gap: 94px;
   padding: 0 15px;
+  width: 1200px;
 }
 
 .footer .container .company-info-container {
@@ -658,8 +659,9 @@ button:active {
 }
 
 .modal {
+  position: absolute;
   background-color: #fefefe;
-  padding: 8px;
+  padding: 40px;
   border: 1px solid #888;
   border-radius: 4px;
   width: 80%;
@@ -669,9 +671,18 @@ button:active {
   height: 581px;
   justify-content: center;
   border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+
+.modal-body h2 {
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 .btn-close-modal {
+  position: absolute; /* Щоб розмістити її у верхньому правому куті */
+  top: 10px; /* Відступ від верхнього краю */
+  right: 10px; /* Відступ від правого краю */
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -703,9 +714,9 @@ button:active {
   align-items: center;
 }
 
-.modal-body {
-  margin: 12px 40px 0 40px;
-}
+/* .modal-body {
+  padding: 12px 40px 0 40px;
+} */
 
 .input-container {
   margin-bottom: 10px;
