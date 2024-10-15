@@ -754,6 +754,12 @@ button:active {
   padding: 12px 16px;
 }
 
+.textarea-field::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  letter-spacing: 1%;
+}
+
 .textarea-wrapper:hover,
 .textarea-wrapper:focus,
 .textarea-wrapper:active {
