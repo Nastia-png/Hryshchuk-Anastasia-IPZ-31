@@ -891,11 +891,6 @@ button:active {
   background-color: var(--accent-color);
 }
 
-.modal-footer .btn-modal-submit:hover,
-.modal-footer .btn-modal-submit:focus {
-  background-color: var(--accent-secondary-color);
-}
-
 .btn-modal-submit-text {
   line-height: 1.8;
   letter-spacing: 0.06em;
