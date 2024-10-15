@@ -680,9 +680,9 @@ button:active {
 }
 
 .btn-close-modal {
-  position: absolute; /* Щоб розмістити її у верхньому правому куті */
-  top: 10px; /* Відступ від верхнього краю */
-  right: 10px; /* Відступ від правого краю */
+  position: absolute;
+  top: 10px;
+  right: 10px;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -713,10 +713,6 @@ button:active {
   justify-content: center;
   align-items: center;
 }
-
-/* .modal-body {
-  padding: 12px 40px 0 40px;
-} */
 
 .input-container {
   margin-bottom: 10px;
@@ -838,6 +834,7 @@ button:active {
   background-color: #ffffff;
   border: 2px solid var(--text-color);
   border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-wrapper .container input:checked ~ .checkmark {
