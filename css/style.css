@@ -577,7 +577,7 @@ button:active {
   justify-content: flex-start;
   align-items: baseline;
   flex-direction: row;
-  gap: 28px;
+  gap: 94px;
   padding: 0 15px;
 }
 
@@ -605,16 +605,6 @@ button:active {
   font-weight: 700;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
-}
-
-.footer-company-section {
-  width: 100%;
-}
-
-.footer-social-links {
-  display: flex;
-  width: 100%;
-  justify-content: center;
 }
 
 .footer-social-links .footer-social-list {
