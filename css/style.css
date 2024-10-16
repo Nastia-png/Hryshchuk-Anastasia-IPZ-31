@@ -10,6 +10,20 @@
   --accent-secondary-color: #188ce8;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -578,12 +592,9 @@ button:active {
 
 .footer .container {
   display: flex;
-  justify-content: flex-start;
   align-items: baseline;
   flex-direction: row;
   gap: 94px;
-  padding: 0 15px;
-  width: 1200px;
 }
 
 .footer .container .company-info-container {
@@ -902,6 +913,10 @@ button:active {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.footer-newsletter-signup {
+  flex-grow: 1;
 }
 
 .footer-newsletter-signup .footer-newsletter-text {
