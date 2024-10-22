@@ -298,12 +298,12 @@
             <ul class="company-info-container">
               <li>
                 <a class="company-info-footer" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
+                >info@devstudio.com</a
                 >
               </li>
               <li>
                 <a class="company-info-footer" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
+                >+38 096 111 11 11</a
                 >
               </li>
             </ul>
@@ -343,14 +343,17 @@
             </li>
           </ul>
         </div>
+
         <div class="footer-newsletter-signup">
           <p class="footer-newsletter-text">Підпишіться на розсилку</p>
-          <div class="input-button-wrapper">
+          <form action="#" method="post" class="newsletter-form">
+            <label class="visually-hidden" for="user_mail_footer">E-mail</label>
             <input
-              type="email"
-              id="email"
-              class="email-input"
-              placeholder="E-mail"
+                    type="email"
+                    class="email-input"
+                    placeholder="E-mail"
+                    id="user_mail_footer"
+                    required
             />
             <button class="btn-submit-newsletter" type="submit">
               Підписатися
@@ -358,7 +361,7 @@
                 <use href="images/icons.svg#icon-icon-send"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
