@@ -811,12 +811,16 @@ button:active {
   margin: 0 12px;
 }
 
-.checkbox-wrapper .container {
-  position: relative;
+.checkbox-wrapper {
   display: flex;
-  align-items: center;
-  padding-left: 25px;
+  justify-content: center;
   margin-top: 20px;
+}
+
+.checkbox-wrapper label {
+  position: relative;
+  padding-left: 25px;
+
   cursor: pointer;
   font-size: 14px;
   -webkit-user-select: none;
@@ -828,7 +832,7 @@ button:active {
   letter-spacing: 0.03em;
 }
 
-.checkbox-wrapper .container input {
+.checkbox-wrapper input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -848,7 +852,7 @@ button:active {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-wrapper .container input:checked ~ .checkmark {
+.checkbox-wrapper input:checked ~ .checkmark {
   background-color: var(--accent-color);
 }
 
@@ -858,11 +862,11 @@ button:active {
   display: none;
 }
 
-.checkbox-wrapper .container input:checked ~ .checkmark:after {
+.checkbox-wrapper input:checked ~ .checkmark:after {
   display: block;
 }
 
-.checkbox-wrapper .container .checkmark:after {
+.checkbox-wrapper .checkmark:after {
   left: 4px;
   top: 1px;
   width: 4px;
@@ -874,7 +878,7 @@ button:active {
   transform: rotate(45deg);
 }
 
-.checkbox-wrapper .container .btn-open-contract {
+.checkbox-wrapper .btn-open-contract {
   color: var(--accent-color);
   text-decoration: underline;
 }
