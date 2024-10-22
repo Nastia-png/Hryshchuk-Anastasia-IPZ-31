@@ -23,7 +23,7 @@
         <nav class="nav-menu">
           <ul class="text14-medium">
             <li><a href="index.html">Студія</a></li>
-            <li><a href="#">Портфоліо</a></li>
+            <li><a href="#" class="active">Портфоліо</a></li>
             <li><a href="#">Контакти</a></li>
           </ul>
         </nav>
@@ -298,12 +298,12 @@
             <ul class="company-info-container">
               <li>
                 <a class="company-info-footer" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
+                >info@devstudio.com</a
                 >
               </li>
               <li>
                 <a class="company-info-footer" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
+                >+38 096 111 11 11</a
                 >
               </li>
             </ul>
@@ -342,6 +342,26 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="footer-newsletter-signup">
+          <p class="footer-newsletter-text">Підпишіться на розсилку</p>
+          <form action="#" method="post" class="newsletter-form">
+            <label class="visually-hidden" for="user_mail_footer">E-mail</label>
+            <input
+                    type="email"
+                    class="email-input"
+                    placeholder="E-mail"
+                    id="user_mail_footer"
+                    required
+            />
+            <button class="btn-submit-newsletter" type="submit">
+              Підписатися
+              <svg class="icon-send">
+                <use href="images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
