@@ -811,6 +811,10 @@ button:active {
   margin: 0 12px;
 }
 
+.input-icon svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .checkbox-wrapper {
   display: flex;
   justify-content: center;
@@ -897,7 +901,7 @@ button:active {
   background-color: var(--accent-color);
   color: white;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-footer .btn-modal-submit:hover,
