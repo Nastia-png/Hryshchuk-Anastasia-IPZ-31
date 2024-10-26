@@ -1,0 +1,85 @@
+@import "../utils/_variables.scss";
+
+body {
+  font-family: $dominant_font;
+  color: $text_color;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.text14-medium {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: normal;
+}
+
+.text14-bold {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.text18-bold {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.h2-index {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  letter-spacing: 0.02em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--accent-color);
+    color: #ffffff;
+  }
+}

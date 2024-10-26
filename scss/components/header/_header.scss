@@ -12,7 +12,7 @@
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 0.03em;
-    font-family: $raleeay_font;
+    font-family: $raleway_font;
     display: inline;
     margin-right: 93px;
     padding: 0;
@@ -43,7 +43,6 @@
           width: 100%;
           background-color: $accent_color;
           transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-          width: 0;
           height: 4px;
           position: absolute;
           left: 0;
@@ -71,7 +70,7 @@
     margin-left: auto;
 
     &-list {
-      color: var(--secondary-text-color);
+      color: var $secondary_text_color;
       display: flex;
       align-items: center;
 
