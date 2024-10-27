@@ -150,11 +150,15 @@
           letter-spacing: 0.06em;
           line-height: 1.8;
           font-weight: 700;
+          transition: background-color 250ms cubic-bezier(.4,0,.2,1),
+          box-shadow 250ms cubic-bezier(.4,0,.2,1),
+          color 250ms cubic-bezier(.4,0,.2,1);
 
           &:focus,
           &:hover {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            background-color: variables.$accent-color;
+            color: #fff;
+            background-color: #2175f3;
           }
         }
       }
