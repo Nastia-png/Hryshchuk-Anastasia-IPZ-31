@@ -82,11 +82,6 @@
               padding: 63px 24px;
             }
           }
-
-          &:hover .text-project-list {
-            opacity: 1;
-            transform: translateY(0%);
-          }
         }
 
         &:hover,
@@ -113,6 +108,11 @@
             line-height: 1.8;
             letter-spacing: 0.03em;
           }
+        }
+
+        &:hover .text-project-list {
+          opacity: 1;
+          transform: translateY(0%);
         }
       }
     }
