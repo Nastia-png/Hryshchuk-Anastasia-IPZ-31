@@ -128,3 +128,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+/css/converted/testfolder/test2/test3/portfolio.css
+/css/converted/styles.css
