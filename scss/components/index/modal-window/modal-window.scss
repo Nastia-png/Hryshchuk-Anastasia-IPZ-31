@@ -1,0 +1,254 @@
+@use "../../../utils/variables";
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  background-color: #fefefe;
+  padding: 40px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .modal-header {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn-close-modal {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: 1px solid variables.$icon-color;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: variables.$accent-color;
+      }
+    }
+  }
+
+  .modal-body {
+    h2 {
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .personal-data-inputs-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .input-container {
+        margin-bottom: 10px;
+
+        .input-title {
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 0.01em;
+          margin-bottom: 4px;
+          color: variables.$secondary-text-color;
+        }
+
+        .input-wrapper {
+          display: flex;
+          align-items: center;
+          border: 1px solid rgba(21, 21, 21, 0.2);
+          border-radius: 4px;
+          width: 100%;
+          height: 40px;
+          transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          cursor: pointer;
+
+          &:hover,
+          &:focus,
+          &:active {
+            border-color: variables.$accent-color;
+            color: variables.$accent-color;
+            fill: currentColor;
+          }
+
+          .input-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 18px;
+            height: 18px;
+            margin: 0 12px;
+
+            svg {
+              transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+          }
+
+          .input-field {
+            border: none;
+            outline: none;
+            padding: 0;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .textarea-wrapper {
+        display: flex;
+        align-items: center;
+        border: 1px solid rgba(21, 21, 21, 0.2);
+        border-radius: 4px;
+        width: 100%;
+        height: 120px;
+        padding: 12px 16px;
+
+        &:hover,
+        &:focus,
+        &:active {
+          border-color: variables.$accent-color;
+        }
+
+        .textarea-field {
+          resize: none;
+          border: none;
+          outline: none;
+          padding: 0;
+          font-size: 16px;
+          width: 100%;
+          height: 100%;
+        }
+
+        &::placeholder {
+          color: rgba(117, 117, 117, 0.5);
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 0.01em;
+        }
+      }
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        font-size: 14px;
+        user-select: none;
+        color: #757575;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 15px;
+          width: 15px;
+          background-color: #ffffff;
+          border: 2px solid variables.$text-color;
+          border-radius: 2px;
+          transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+        }
+
+        input:checked ~ .checkmark {
+          background-color: variables.$accent-color;
+
+          &:after {
+            display: block;
+            left: 4px;
+            top: 1px;
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      .btn-open-contract {
+        color: variables.$accent-color;
+        text-decoration: underline;
+      }
+    }
+
+    .modal-footer {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .btn-modal-submit {
+        height: 50px;
+        width: 200px;
+        border-radius: 4px;
+        background-color: variables.$accent-color;
+        color: white;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          background-color: variables.$accent-color;
+        }
+
+        .btn-modal-submit-text {
+          line-height: 1.8;
+          letter-spacing: 0.06em;
+          font-weight: 700;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

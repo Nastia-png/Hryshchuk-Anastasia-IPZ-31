@@ -1,8 +1,19 @@
-@import "../utils/_variables.scss";
+@use "../utils/variables";
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  --accent-secondary-color: #188ce8;
+}
 
 body {
-  font-family: $dominant_font;
-  color: $text_color;
+  font-family: variables.$dominant_font;
+  color: variables.$text_color;
   font-size: 14px;
   letter-spacing: normal;
   line-height: normal;
@@ -57,7 +68,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: variables.$text-color;
   letter-spacing: 0.02em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,7 +76,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: var(--accent-color);
+    color: variables.$accent-color;
   }
 }
 
@@ -79,7 +90,7 @@ button {
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--accent-color);
+    background-color: variables.$accent-color;
     color: #ffffff;
   }
 }

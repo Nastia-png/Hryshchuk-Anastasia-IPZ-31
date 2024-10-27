@@ -102,7 +102,6 @@ dist
 
 # vuepress v2.x temp and cache directory
 .temp
-.cache
 
 # Docusaurus cache and generated files
 .docusaurus
@@ -130,3 +129,9 @@ dist
 .pnp.*
 /css/converted/testfolder/test2/test3/portfolio.css
 /css/converted/styles.css
+/css/converted/base/default.css
+/css/converted/components/footer/footer.css
+/css/converted/components/header/header.css
+/css/converted/components/index/index.css
+/css/converted/components/index/modal-window/modal-window.css
+/css/converted/components/portfolio/portfolio.css
