@@ -1,0 +1,122 @@
+@use "../../utils/variables";
+
+.portfolio {
+  padding: 94px 0;
+  box-sizing: border-box;
+
+  .container {
+    .btn-business-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 50px;
+      transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      .btn-type-business {
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        line-height: calc(26 / 16);
+        font-size: 16px;
+        font-weight: 500;
+        padding: 6px 22px;
+        border-radius: 4px;
+        text-align: center;
+        background-color: variables.$button-bg-color;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          background-color: variables.$accent-color;
+          color: #ffffff;
+        }
+
+        .btn-type-business-text {
+          display: inline-block;
+        }
+      }
+    }
+
+    .project-list {
+      flex-wrap: wrap;
+      display: flex;
+      gap: 30px;
+      list-style: none;
+
+      .project-elements {
+        border: 1px solid #eee;
+        background: #ffffff;
+        max-width: 370px;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        .project-elements-container {
+          position: relative;
+          overflow: hidden;
+
+          .img-project {
+            width: 100%;
+          }
+
+          .text-project-list {
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            background-color: rgba(33, 150, 243, 0.9);
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 20px;
+            transform: translateY(101%); // Initially hidden below the element
+
+            .text-project-info {
+              font-size: 18px;
+              letter-spacing: 0.03em;
+              line-height: 1.5;
+              color: #ffffff;
+              padding: 63px 24px;
+            }
+          }
+        }
+
+        &:hover,
+        &:focus {
+          background-color: #ffffff;
+          border: 1px solid #eeeeee;
+          box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
+          0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .project-info {
+          padding: 20px 23px;
+
+          .text18-bold {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            line-height: 2;
+          }
+
+          .project-category {
+            font-size: 16px;
+            color: variables.$secondary-text-color;
+            line-height: 1.8;
+            letter-spacing: 0.03em;
+          }
+        }
+
+        &:hover .text-project-list {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+}

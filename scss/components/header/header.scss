@@ -1,0 +1,86 @@
+@use "../../utils/variables";
+
+.header {
+  border: 1px solid #ececec;
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    flex-direction: row;
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+
+      ul {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        li a {
+          position: relative;
+          padding-bottom: 32px;
+
+          &::after {
+            display: block;
+            content: "";
+            width: 0;
+            background-color: variables.$accent-color;
+            transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            height: 4px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: 2px;
+          }
+
+          &:hover::after,
+          &:focus::after,
+          &.active::after {
+            width: 100%;
+          }
+
+          &.active {
+            color: variables.$accent-color;
+          }
+        }
+      }
+    }
+
+    .company-info-container {
+      display: flex;
+      gap: 40px;
+      flex-direction: row;
+      margin-left: auto;
+
+      .company-info {
+        color: variables.$secondary-text-color;
+        display: flex;
+        align-items: center;
+
+        .header-icon {
+          margin-right: 10px;
+          vertical-align: middle;
+          fill: currentColor;
+        }
+      }
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-family: "Raleway", sans-serif;
+      display: inline;
+      margin-right: 93px;
+      padding: 0;
+
+      .logo-color {
+        color: variables.$accent-color;
+      }
+    }
+  }
+}

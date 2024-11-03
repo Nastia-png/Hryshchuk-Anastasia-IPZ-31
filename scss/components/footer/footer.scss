@@ -1,0 +1,167 @@
+@use "../../utils/variables";
+
+.footer {
+  background-color: variables.$background-fill-color;
+  padding: 60px 60px;
+
+  .container {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    gap: 94px;
+
+    .footer-company-section {
+      .logo {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        font-family: "Raleway", sans-serif;
+        display: inline;
+        margin-right: 93px;
+        padding: 0;
+
+        .logo-color {
+          color: variables.$accent-color;
+        }
+
+        .logo-secondary-color {
+          color: #ffffff;
+        }
+      }
+
+      address {
+        margin-top: 28px;
+
+        .company-address {
+          font-size: 14px;
+          line-height: 1.1;
+          letter-spacing: 0.03em;
+          font-style: normal;
+          color: #ffffff;
+          margin-bottom: 12px;
+        }
+
+        .company-info-container {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          .company-info-footer {
+            color: variables.$main-bg-color;
+            opacity: 0.6;
+            line-height: 1.1;
+            letter-spacing: 0.03em;
+            font-style: normal;
+          }
+        }
+      }
+    }
+
+    .footer-social-links {
+      display: flex;
+      flex-direction: column;
+
+      .footer-text-join {
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin-bottom: 20px;
+      }
+
+      .footer-social-list {
+        display: flex;
+        gap: 10px;
+
+        .footer-social-list-icons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
+          width: 44px;
+          height: 44px;
+          color: #ffffff;
+          fill: currentColor;
+          transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+          &:hover,
+          &:focus {
+            background-color: variables.$accent-color;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .footer-newsletter-signup {
+      flex-grow: 1;
+
+      .footer-newsletter-text {
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          border: 0;
+          padding: 0;
+          white-space: nowrap;
+          clip-path: inset(100%);
+          clip: rect(0 0 0 0);
+          overflow: hidden;
+        }
+
+        .email-input {
+          flex-grow: 1;
+          height: 50px;
+          padding: 15px 16px;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          background-color: transparent;
+          border-radius: 4px;
+          color: white;
+          transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-submit-newsletter {
+          width: 200px;
+          height: 50px;
+          background-color: variables.$accent-color;
+          color: white;
+          border: none;
+          padding: 10px 28px;
+          border-radius: 4px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          font-size: 16px;
+          letter-spacing: 0.06em;
+          line-height: 1.8;
+          font-weight: 700;
+          transition: background-color 250ms cubic-bezier(.4,0,.2,1),
+          box-shadow 250ms cubic-bezier(.4,0,.2,1),
+          color 250ms cubic-bezier(.4,0,.2,1);
+
+          &:focus,
+          &:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            background-color: #2175f3;
+          }
+        }
+      }
+    }
+  }
+}
