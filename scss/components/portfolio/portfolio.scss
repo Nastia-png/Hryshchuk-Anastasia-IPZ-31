@@ -39,6 +39,17 @@
           display: inline-block;
         }
       }
+
+      @media screen and (max-width: 768px) {
+
+      }
+
+      @media screen and (max-width: 479px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: left;
+      }
     }
 
     .project-list {
@@ -116,6 +127,15 @@
           opacity: 1;
           transform: translateY(0%);
         }
+
+        @media screen and (max-width: 1000px) {
+          width: 354px;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 354px;
+        }
+
       }
     }
   }

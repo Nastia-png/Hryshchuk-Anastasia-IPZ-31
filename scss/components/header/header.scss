@@ -48,6 +48,21 @@
           }
         }
       }
+
+      @media screen and (max-width: 479px) {
+        display: none; /* Приховати контактну інформацію */
+      }
+    }
+
+    .menu-btn {
+      display: none;
+      position: absolute;
+      right: 20px;
+      background-color: #fff;
+
+      @media screen and (max-width: 479px) {
+        display: block;
+      }
     }
 
     .company-info-container {
@@ -66,6 +81,22 @@
           vertical-align: middle;
           fill: currentColor;
         }
+      }
+
+      @media screen and (max-width: 1000px) {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 768px) {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 479px) {
+        display: none; /* Приховати контактну інформацію */
       }
     }
 

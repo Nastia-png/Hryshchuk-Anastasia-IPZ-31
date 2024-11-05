@@ -28,6 +28,11 @@ main {
         color: #ffffff;
         text-align: center;
 
+        @media screen and (max-width: 768px) {
+          font-size: 26px;
+          line-height: calc(42 / 26);
+        }
+
         @media screen and (max-width: 479px) {
           font-size: 26px;
           line-height: calc(42 / 26);
@@ -77,6 +82,10 @@ main {
         .company-description-item {
           max-width: 270px;
 
+          @media screen and (max-width: 768px) {
+            max-width: 100%;
+          }
+
           @media screen and (max-width: 479px) {
             max-width: 100%;
           }
@@ -95,6 +104,10 @@ main {
             font-size: 14px;
             font-weight: 700;
             letter-spacing: 0.03em;
+
+            @media screen and (max-width: 479px) {
+              text-align: center;
+            }
           }
 
           .company-description-text {
@@ -104,6 +117,8 @@ main {
             color: variables.$secondary-text-color;
             margin-top: 10px;
           }
+
+
         }
       }
     }
@@ -120,6 +135,14 @@ main {
         font-weight: 700;
         letter-spacing: 0.03em;
         text-align: center;
+
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 479px) {
+          font-size: 28px;
+        }
       }
 
       .img-work-list {
@@ -182,6 +205,14 @@ main {
         font-weight: 700;
         letter-spacing: 0.03em;
         text-align: center;
+
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 479px) {
+          font-size: 28px;
+        }
       }
 
       .team-member-list {
@@ -285,6 +316,14 @@ main {
         letter-spacing: 0.03em;
         text-align: center;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 479px) {
+          font-size: 28px;
+        }
       }
 
       .regular-client-list {
