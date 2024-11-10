@@ -14,6 +14,10 @@
       align-items: center;
       margin-right: auto;
 
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
       ul {
         flex-direction: row;
         display: flex;
@@ -48,10 +52,6 @@
           }
         }
       }
-
-      @media screen and (max-width: 479px) {
-        display: none; /* Приховати контактну інформацію */
-      }
     }
 
     .menu-btn {
@@ -60,7 +60,7 @@
       right: 20px;
       background-color: #fff;
 
-      @media screen and (max-width: 479px) {
+      @media screen and (max-width: 768px) {
         display: block;
       }
     }
@@ -72,6 +72,16 @@
       flex-direction: row;
       margin-left: auto;
 
+      @media screen and (max-width: 1200px) {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
       .company-info {
         color: variables.$secondary-text-color;
         display: flex;
@@ -82,22 +92,6 @@
           vertical-align: middle;
           fill: currentColor;
         }
-      }
-
-      @media screen and (max-width: 1000px) {
-        gap: 10px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      @media screen and (max-width: 768px) {
-        gap: 10px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      @media screen and (max-width: 479px) {
-        display: none; /* Приховати контактну інформацію */
       }
     }
 

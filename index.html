@@ -57,8 +57,8 @@
 </header>
 
 <main>
-    <div data-modal class="modal-backdrop is-hidden">
-        <div class="modal">
+    <div data-modal-contact-us class="modal-backdrop is-hidden">
+        <div class="modal-contact-us">
             <div class="modal-header">
                 <button data-modal-close class="btn-close-modal">
                     <svg class="modal_icon-close" width="11" height="11">
@@ -69,6 +69,106 @@
 
             <form class="modal-body">
                 <h2>Залиште свої дані, ми вам передзвонимо</h2>
+
+                <ul class="personal-data-inputs-list">
+                    <li class="input-container">
+                        <label for="user_name_modal" class="input-title">Ім'я</label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <svg class="icon" width="12" height="12">
+                                    <use href="images/icons.svg#icon-Vector-2"></use>
+                                </svg>
+                            </div>
+                            <input
+                                    class="input-field"
+                                    type="text"
+                                    name="name"
+                                    id="user_name_modal"
+                                    required
+                            />
+                        </div>
+                    </li>
+
+                    <li class="input-container">
+                        <label for="user_phone_modal" class="input-title">Телефон</label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <svg class="icon" width="13" height="13">
+                                    <use href="images/icons.svg#icon-Vector-3"></use>
+                                </svg>
+                            </div>
+                            <input
+                                    class="input-field"
+                                    type="number"
+                                    name="phone"
+                                    id="user_phone_modal"
+                                    required
+                            />
+                        </div>
+                    </li>
+
+                    <li class="input-container">
+                        <label for="user_mail_modal" class="input-title">Пошта</label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <svg class="icon" width="15" height="12">
+                                    <use href="images/icons.svg#icon-Vector-4"></use>
+                                </svg>
+                            </div>
+                            <input
+                                    class="input-field"
+                                    type="text"
+                                    name="email"
+                                    id="user_mail_modal"
+                                    required
+                            />
+                        </div>
+                    </li>
+
+                    <li class="input-container">
+                        <p class="input-title">Коментар</p>
+                        <div class="textarea-wrapper">
+                  <textarea
+                          class="textarea-field"
+                          name="comment"
+                          placeholder="Введіть текст"
+                  ></textarea>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="checkbox-wrapper">
+                    <label>
+                        Погоджуюся з розсилкою та приймаю&nbsp;
+                        <a href="#" class="btn-open-contract"> Умови договору</a>
+                        <input type="checkbox" checked="checked"/>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <form>
+                        <button class="btn-modal-submit">
+                            <p class="btn-modal-submit-text">Відправити</p>
+                        </button>
+                    </form>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div data-modal-nav-menu class="modal-backdrop is-hidden">
+        <div class="modal-nav-menu">
+            <div class="modal-header">
+                <button data-modal-close class="btn-close-modal">
+                    <svg class="modal_icon-close" width="11" height="11">
+                        <use href="images/icons.svg#icon-Vector-1"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <form class="modal-body">
+                <h2>ми вам передзвонимо</h2>
 
                 <ul class="personal-data-inputs-list">
                     <li class="input-container">
@@ -264,6 +364,7 @@
     <section class="section2">
         <div class="container">
             <h2 class="h2-index">Наша команда</h2>
+            <div class="team-member-item">
             <ul class="team-member-list">
                 <li class="team-member">
                     <img
@@ -441,12 +542,14 @@
                     </div>
                 </li>
             </ul>
+            </div>
         </div>
     </section>
 
     <section class="regular-clients">
         <div class="container">
             <h2 class="h2-index">Постійні клієнти</h2>
+            <div class="regular-client-item">
             <ul class="regular-client-list">
                 <li class="client">
                     <a href="#">
@@ -491,6 +594,7 @@
                     </a>
                 </li>
             </ul>
+            </div>
         </div>
     </section>
 </main>

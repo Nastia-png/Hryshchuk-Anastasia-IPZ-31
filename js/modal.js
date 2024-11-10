@@ -1,16 +1,27 @@
 (() => {
-    const refs = {
-        openModalBtn: document.querySelector(".btn-order-service"),
-        // menuBtn: document.querySelector(".menu-btn"),
-        closeModalBtn: document.querySelector("[data-modal-close]"),
-        modal: document.querySelector("[data-modal]"),
-        // modalSecond: document.querySelector("[data-modal-second]"),
-    };
+    // Функція для налаштування модалки
+    function setupModal(openButtonSelector, closeButtonSelector, modalSelector) {
+        const openModalBtn = document.querySelector(openButtonSelector);
+        const modal = document.querySelector(modalSelector);
+        const closeModalBtns = modal.querySelectorAll(closeButtonSelector);
 
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
+        if (openModalBtn && modal) {
+            openModalBtn.addEventListener("click", () => toggleModal(modal));
+        }
 
-    function toggleModal() {
-        refs.modal.classList.toggle("is-hidden");
+        closeModalBtns.forEach(btn => {
+            btn.addEventListener("click", () => toggleModal(modal));
+        });
     }
+
+    // Функція для перемикання видимості модалки
+    function toggleModal(modal) {
+        modal.classList.toggle("is-hidden");
+    }
+
+    // Налаштування для модалки "Contact Us"
+    setupModal(".btn-order-service", "[data-modal-close]", "[data-modal-contact-us]");
+
+    // Налаштування для модалки "Nav Menu"
+    setupModal(".menu-btn", "[data-modal-close]", "[data-modal-nav-menu]");
 })();
