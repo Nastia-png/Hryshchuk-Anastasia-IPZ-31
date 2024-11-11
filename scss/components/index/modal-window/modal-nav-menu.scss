@@ -60,6 +60,15 @@
       &:last-child {
         margin-bottom: 0;
       }
+
+      a {
+        position: relative;
+        padding-bottom: 32px;
+
+        &.active {
+          color: variables.$accent-color;
+        }
+      }
     }
   }
 
