@@ -27,6 +27,16 @@ main {
         line-height: 1.3;
         color: #ffffff;
         text-align: center;
+
+        @media screen and (max-width: 768px) {
+          font-size: 26px;
+          line-height: calc(42 / 26);
+        }
+
+        @media screen and (max-width: 479px) {
+          font-size: 26px;
+          line-height: calc(42 / 26);
+        }
       }
 
       .btn-order-service {
@@ -59,8 +69,26 @@ main {
         flex-direction: row;
         flex: 1;
 
+        @media screen and (max-width: 1200px) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 768px) {
+          display: flex;
+          flex-direction: column;
+        }
+
         .company-description-item {
           max-width: 270px;
+
+          @media screen and (max-width: 1200px) {
+            max-width: 100%;
+          }
+
+          @media screen and (max-width: 768px) {
+            max-width: 100%;
+          }
 
           .company-icon {
             display: flex;
@@ -76,6 +104,10 @@ main {
             font-size: 14px;
             font-weight: 700;
             letter-spacing: 0.03em;
+
+            @media screen and (max-width: 479px) {
+              text-align: center;
+            }
           }
 
           .company-description-text {
@@ -85,12 +117,22 @@ main {
             color: variables.$secondary-text-color;
             margin-top: 10px;
           }
+
+
         }
       }
     }
   }
 
   .img-work {
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+
     .container {
       box-sizing: border-box;
       padding: 0 15px;
@@ -101,6 +143,14 @@ main {
         font-weight: 700;
         letter-spacing: 0.03em;
         text-align: center;
+
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 479px) {
+          font-size: 28px;
+        }
       }
 
       .img-work-list {
@@ -110,6 +160,12 @@ main {
         flex-direction: row;
         gap: 30px;
         margin-top: 50px;
+
+        @media screen and (max-width: 479px) {
+          display: flex;
+          flex-direction: column;
+        }
+
 
         .list-img-work {
           position: relative;
@@ -147,75 +203,132 @@ main {
     box-sizing: border-box;
     padding: 95px 0;
 
+    @media screen and (max-width: 479px) {
+      padding: 60px 0;;
+    }
+
     .container {
       .h2-index {
         font-size: 36px;
         font-weight: 700;
         letter-spacing: 0.03em;
         text-align: center;
+
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 479px) {
+          font-size: 28px;
+        }
       }
 
-      .team-member-list {
+      .team-member-item {
         display: flex;
         justify-content: center;
-        flex-direction: row;
-        gap: 30px;
-        margin-top: 50px;
 
-        .team-member {
-          border-radius: 0 0 4px 4px;
-          background: #ffffff;
-          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
-          0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-          padding-bottom: 30px;
+        .team-member-list {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          gap: 30px;
+          margin-top: 50px;
 
-          .portfolio-team-member {
-            margin-bottom: 30px;
+          @media screen and (max-width: 1200px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
           }
 
-          .member-info {
-            .team-member-name {
-              font-size: 16px;
-              font-weight: 500;
-              letter-spacing: 0.03em;
-              text-align: center;
-              margin-bottom: 10px;
+          @media screen and (max-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+          }
+
+
+          @media screen and (max-width: 479px) {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .team-member {
+            border-radius: 0 0 4px 4px;
+            background: #ffffff;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+            0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+            padding-bottom: 30px;
+
+            @media screen and (max-width: 1200px) {
+              width: 354px;
+              height: 536px;
             }
 
-            .team-member-job-title {
-              font-size: 16px;
-              color: variables.$secondary-text-color;
-              letter-spacing: 0.03em;
-              text-align: center;
-              margin-bottom: 16px;
-            }
-
-            .team-members-social-links {
+            @media screen and (max-width: 768px) {
               display: flex;
-              gap: 10px;
-              justify-content: center;
-              align-items: center;
+              flex-direction: column;
+              width: 450px;
+              height: 622px;
+            }
 
-              .social-links-icons {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                color: variables.$icon-color;
-                fill: currentColor;
-                width: 44px;
-                height: 44px;
-                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            .portfolio-team-member {
+              margin-bottom: 30px;
 
-                &:hover {
-                  color: #ffffff;
-                }
+              @media screen and (max-width: 1200px) {
+                width: 354px;
+                height: 374px;
               }
 
-              a:hover,
-              a:focus {
-                background-color: variables.$accent-color;
-                outline: none;
+              @media screen and (max-width: 768px) {
+                width: 450px;
+                height: 460px;
+              }
+
+
+            }
+
+            .member-info {
+              .team-member-name {
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0.03em;
+                text-align: center;
+                margin-bottom: 10px;
+              }
+
+              .team-member-job-title {
+                font-size: 16px;
+                color: variables.$secondary-text-color;
+                letter-spacing: 0.03em;
+                text-align: center;
+                margin-bottom: 16px;
+              }
+
+              .team-members-social-links {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+
+                .social-links-icons {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 50%;
+                  color: variables.$icon-color;
+                  fill: currentColor;
+                  width: 44px;
+                  height: 44px;
+                  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                  &:hover {
+                    color: #ffffff;
+                  }
+                }
+
+                a:hover,
+                a:focus {
+                  background-color: variables.$accent-color;
+                  outline: none;
+                }
               }
             }
           }
@@ -236,35 +349,77 @@ main {
         letter-spacing: 0.03em;
         text-align: center;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media screen and (max-width: 479px) {
+          font-size: 28px;
+        }
       }
 
-      .regular-client-list {
+      .regular-client-item {
         display: flex;
         justify-content: center;
-        gap: 30px;
-        width: 100%;
-        margin-top: 50px;
 
-        .client {
-          a {
-            border-radius: 4px;
-            border: 1px solid variables.$icon-color;
-            display: inline-block;
-            padding: 16px 32px; // Ensuring consistent padding
-            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        .regular-client-list {
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+          width: 100%;
+          margin: 0;
 
-            &:hover {
-              border-color: variables.$accent-color;
-            }
+          @media screen and (max-width: 1200px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0;
+          }
 
-            .client-logo {
-              width: 106px;
-              height: 60px;
-              fill: variables.$icon-color;
-              transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          @media screen and (max-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          @media screen and (max-width: 479px) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin: 0;
+          }
+
+
+          .client {
+            a {
+              border-radius: 4px;
+              border: 1px solid variables.$icon-color;
+              display: inline-block;
+              padding: 16px 32px;
+              transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+              @media screen and (max-width: 1200px) {
+                width: 226px;
+                height: 92px;
+              }
+
+              @media screen and (max-width: 768px) {
+                width: 210px;
+                height: 92px;
+              }
+
 
               &:hover {
-                fill: variables.$accent-color;
+                border-color: variables.$accent-color;
+              }
+
+              .client-logo {
+                width: 106px;
+                height: 60px;
+                fill: variables.$icon-color;
+                transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                &:hover {
+                  fill: variables.$accent-color;
+                }
               }
             }
           }

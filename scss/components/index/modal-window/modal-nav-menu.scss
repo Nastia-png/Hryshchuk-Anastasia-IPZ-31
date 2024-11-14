@@ -1,0 +1,99 @@
+@use "../../../utils/variables";
+
+.modal-nav-menu {
+  position: absolute;
+  background-color: #fefefe;
+  padding: 40px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  width: 480px;
+  height: 796px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  justify-content: center;
+  box-sizing: border-box;
+
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  .modal-header-nav-menu {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn-close-modal-nav-menu {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: variables.$accent-color;
+      }
+    }
+  }
+
+  .nav-menu {
+    li {
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        position: relative;
+        padding-bottom: 32px;
+
+        &.active {
+          color: variables.$accent-color;
+        }
+      }
+    }
+  }
+
+  .modal-company-info-nav-menu {
+    margin-top: 306px;
+
+    .company-info-footer-telephone {
+      color: variables.$accent-color;
+    }
+
+    .company-info-footer-email {
+      color: variables.$secondary_text_color
+    }
+  }
+
+  .modal-social-links-nav-menu {
+    height: 22px;
+    margin-top: 64px;
+    color: rgba(33, 33, 33, 0.2);;
+
+    a {
+      color: variables.$accent-color;
+    }
+  }
+}
+
+
+

@@ -10,6 +10,24 @@
     flex-direction: row;
     gap: 94px;
 
+    @media screen and (max-width: 1000px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 568px) {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
     .footer-company-section {
       .logo {
         font-size: 26px;
@@ -26,6 +44,14 @@
 
         .logo-secondary-color {
           color: #ffffff;
+        }
+
+        @media screen and (max-width: 479px) {
+          margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+          margin: 0;
         }
       }
 
@@ -54,6 +80,11 @@
             font-style: normal;
           }
         }
+      }
+
+      @media screen and (max-width: 768px) {
+        order: 1;
+        text-align: center;
       }
     }
 
@@ -91,6 +122,15 @@
           }
         }
       }
+
+      @media screen and (max-width: 1000px) {
+        align-items: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        order: 1;
+        align-items: center;
+      }
     }
 
     .footer-newsletter-signup {
@@ -102,12 +142,26 @@
         letter-spacing: 0.03em;
         margin-bottom: 20px;
         text-transform: uppercase;
+
+        @media screen and (max-width: 1200px) {
+          text-align: center;
+        }
+
+        @media screen and (max-width: 479px) {
+          margin: 0;
+        }
       }
 
       form {
         display: flex;
         align-items: center;
         gap: 10px;
+        justify-content: center;
+
+        @media screen and (max-width: 1200px) {
+          flex-direction: column;
+        }
+
 
         .visually-hidden {
           position: absolute;
@@ -131,6 +185,15 @@
           border-radius: 4px;
           color: white;
           transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+          @media screen and (max-width: 1200px) {
+            max-width: 200px;
+          }
+
+          @media screen and (max-width: 1000px) {
+            max-width: 80vw;
+            width: 80vw;
+          }
         }
 
         .btn-submit-newsletter {
@@ -150,9 +213,9 @@
           letter-spacing: 0.06em;
           line-height: 1.8;
           font-weight: 700;
-          transition: background-color 250ms cubic-bezier(.4,0,.2,1),
-          box-shadow 250ms cubic-bezier(.4,0,.2,1),
-          color 250ms cubic-bezier(.4,0,.2,1);
+          transition: background-color 250ms cubic-bezier(.4, 0, .2, 1),
+          box-shadow 250ms cubic-bezier(.4, 0, .2, 1),
+          color 250ms cubic-bezier(.4, 0, .2, 1);
 
           &:focus,
           &:hover {
@@ -161,6 +224,43 @@
             background-color: #2175f3;
           }
         }
+
+        @media screen and (max-width: 768px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+
+        @media screen and (max-width: 479px) {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 20px;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        order: 2;
+        text-align: center;
+        grid-column-end: 3;
+        grid-column-start: 1;
+      }
+
+      @media screen and (max-width: 768px) {
+        order: 2;
+        text-align: center;
+        grid-column-end: 3;
+        grid-column-start: 1;
+      }
+
+      @media screen and (max-width: 479px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 20px;
       }
     }
   }
